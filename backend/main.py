@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from backend.rag import stream_answer
+from rag import stream_answer
 import os
 
 # ----------------------------
@@ -39,7 +39,7 @@ def health():
 def ask(query: Query):
     return StreamingResponse(
         stream_answer(query.question),
-        media_type="text/event-stream"
+        media_type="text/plain"
     )
 
 # ----------------------------

@@ -1,7 +1,6 @@
 pinecone==3.2.2
-google-genai
-fastapi
-uvicorn
-python-dotenv
-pypdf
-pydantic
+google-genai==0.3.0
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-dotenv==1.0.1
+pydantic==2.6.4
